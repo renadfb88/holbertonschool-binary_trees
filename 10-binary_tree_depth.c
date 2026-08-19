@@ -10,11 +10,11 @@ size_t binary_tree_depth(const binary_tree_t *tree)
 {
 	size_t depth = 0;
 
-	/* فحص الأمان: إذا كانت العقدة فارغة أو غير موجودة */
+	/* Safety check: if the node is NULL, depth is 0 */
 	if (tree == NULL)
 		return (0);
 
-	/* حلقة تكرار تصعد خطوة بخطوة للأعلى عبر الآباء */
+	/* Loop to traverse upwards through parents to calculate depth steps */
 	while (tree->parent != NULL)
 	{
 		depth++;
